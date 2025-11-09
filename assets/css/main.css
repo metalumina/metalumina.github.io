@@ -2,7 +2,7 @@
   File: main.css
   Project: Metalumina Studios | Coming Soon
   Created: 10.14.2025
-  Updated: 10.14.2025
+  Updated: 11.09.2025
   Author: Faro Digital Studio
 --------------------------------------------------------------*/
 /* Fonts */
@@ -1282,4 +1282,17 @@ input[type="submit"]:focus {
   --nav-dropdown-background-color: #1B1E24;
   --nav-dropdown-color: #CDD3DA;
   --nav-dropdown-hover-color: #FFFFFF;
+}
+
+/* Mirror body.scrolled to header state (optional fallback) */
+body.scrolled #header { 
+  /* make it behave exactly like .header.header-scrolled */
+  --background-color: rgba(255, 255, 255, 0.86);
+  background-color: var(--background-color);
+  backdrop-filter: saturate(140%) blur(6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+  --nav-color: #1B1E24;
+  --nav-hover-color: #B7C0C9;
+  --heading-color: #0f1418;
 }

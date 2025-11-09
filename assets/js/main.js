@@ -1,9 +1,9 @@
 /**
-* Template Name: Maundy
-* Template URL: https://bootstrapmade.com/maundy-free-coming-soon-bootstrap-theme/
-* Updated: Feb 01 2025 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
+* File: main.js
+* Project: Metalumina Studios | Coming Soon
+* Created: 02.01.2025 with Bootstrap v5.3.3
+* Updated: 11.09.2025
+* Author: Faro Digital Studio
 */
 
 (function() {
@@ -13,10 +13,15 @@
    * Apply .scrolled class to the body as the page is scrolled down
    */
   function toggleScrolled() {
-    const selectBody = document.querySelector('body');
-    const selectHeader = document.querySelector('#header');
-    if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+    const body = document.body;
+    const header = document.querySelector('#header');
+    const scrolled = window.scrollY > 100;
+
+    // keep body marker (if other styles/scripts use it)
+    body.classList.toggle('scrolled', scrolled);
+
+    // drive the CSS you already wrote
+    if (header) header.classList.toggle('header-scrolled', scrolled);
   }
 
   document.addEventListener('scroll', toggleScrolled);
