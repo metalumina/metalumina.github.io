@@ -1,0 +1,91 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Team Section
+--------------------------------------------------------------*/
+.team {
+  .member-card {
+    padding: 40px;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border-radius: 2px;
+    background: var(--surface-color);
+    gap: 32px;
+    align-items: flex-start;
+    transition: border-color 0.3s ease;
+
+    &:hover {
+      border-color: color-mix(in srgb, var(--default-color), transparent 70%);
+    }
+  }
+
+  .avatar-col {
+    flex-shrink: 0;
+
+    img {
+      width: 96px;
+      height: 96px;
+      object-fit: cover;
+      border-radius: 2px;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+    }
+
+    .member-card:hover & img {
+      filter: grayscale(0%);
+    }
+  }
+
+  .info-col {
+    h4 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: var(--heading-color);
+    }
+
+    .role {
+      display: block;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--accent-color);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      margin-bottom: 20px;
+    }
+  }
+
+  .social-row {
+    display: flex;
+    gap: 16px;
+
+    a {
+      color: color-mix(in srgb, var(--default-color), transparent 50%);
+      font-size: 15px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .member-card {
+      flex-direction: column;
+      padding: 32px;
+      gap: 24px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .social-row {
+      justify-content: center;
+    }
+  }
+}

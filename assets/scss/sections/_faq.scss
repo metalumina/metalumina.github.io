@@ -1,0 +1,180 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Faq Section
+--------------------------------------------------------------*/
+.faq {
+  .category-nav {
+    position: sticky;
+    top: 120px;
+
+    .nav {
+      gap: 0;
+
+      .nav-item {
+        .nav-link {
+          padding: 12px 0;
+          font-size: 0.95rem;
+          font-weight: 500;
+          color: color-mix(in srgb, var(--default-color), transparent 50%);
+          background: none;
+          border: none;
+          border-left: 2px solid color-mix(in srgb, var(--default-color), transparent 90%);
+          border-radius: 0;
+          text-align: left;
+          padding-left: 20px;
+          transition: color 0.3s ease, border-color 0.3s ease;
+          letter-spacing: 0.02em;
+
+          &:hover {
+            color: var(--default-color);
+          }
+
+          &.active {
+            color: var(--default-color);
+            font-weight: 600;
+            border-left-color: var(--accent-color);
+            background: none;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 992px) {
+      position: static;
+      margin-bottom: 48px;
+
+      .nav {
+        flex-direction: row !important;
+        gap: 0;
+        border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+        .nav-item .nav-link {
+          border-left: none;
+          border-bottom: 2px solid transparent;
+          padding: 10px 20px;
+          text-align: center;
+
+          &.active {
+            border-bottom-color: var(--accent-color);
+            border-left: none;
+          }
+        }
+      }
+    }
+  }
+
+  .faq-list {
+    .faq-item {
+      border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+      transition: border-color 0.3s ease;
+
+      &:first-child {
+        border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+      }
+
+      h3 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 0;
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        line-height: 1.6;
+
+        .question {
+          flex: 1;
+          padding-right: 16px;
+        }
+
+        .faq-toggle {
+          font-size: 0.85rem;
+          transition: transform 0.3s ease;
+          color: color-mix(in srgb, var(--default-color), transparent 50%);
+          flex-shrink: 0;
+        }
+      }
+
+      .faq-content {
+        display: none;
+        padding-bottom: 24px;
+
+        p {
+          margin: 0;
+          line-height: 1.8;
+          color: color-mix(in srgb, var(--default-color), transparent 30%);
+          font-size: 0.95rem;
+
+          &+p {
+            margin-top: 12px;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &.faq-active {
+        h3 {
+          .faq-toggle {
+            transform: rotate(180deg);
+            color: var(--accent-color);
+          }
+        }
+
+        .faq-content {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .faq-cta {
+    padding: 64px 0 0;
+
+    p {
+      font-size: 1rem;
+      color: color-mix(in srgb, var(--default-color), transparent 40%);
+      margin-bottom: 16px;
+    }
+
+    .cta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--accent-color);
+      border-bottom: 1px solid var(--accent-color);
+      padding-bottom: 4px;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      i {
+        font-size: 0.85rem;
+        transition: transform 0.3s ease;
+      }
+
+      &:hover i {
+        transform: translateX(4px);
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .faq-list .faq-item h3 {
+      padding: 20px 0;
+      font-size: 0.95rem;
+    }
+
+    .faq-list .faq-item .faq-content {
+      padding-bottom: 20px;
+    }
+  }
+}

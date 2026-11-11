@@ -2,7 +2,7 @@
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-/* Navmenu - Desktop */
+/* Desktop Navigation */
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
@@ -19,11 +19,20 @@
       position: relative;
     }
 
+    >ul>li {
+      white-space: nowrap;
+      padding: 15px 14px;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
     a,
     a:focus {
-      color: var(--nav-color);
-      padding: 18px 15px;
-      font-size: 16px;
+      color: color-mix(in srgb, var(--nav-color), transparent 30%);
+      font-size: 15px;
+      padding: 0 2px;
       font-family: var(--nav-font);
       font-weight: 400;
       display: flex;
@@ -31,6 +40,7 @@
       justify-content: space-between;
       white-space: nowrap;
       transition: 0.3s;
+      position: relative;
 
       i {
         font-size: 12px;
@@ -40,14 +50,29 @@
       }
     }
 
-    li:last-child a {
-      padding-right: 0;
+    >ul>li>a:before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      bottom: -27px;
+      left: 0;
+      background-color: var(--nav-hover-color);
+      visibility: hidden;
+      width: 0px;
+      transition: all 0.3s ease-in-out 0s;
+    }
+
+    a:hover:before,
+    li:hover>a:before,
+    .active:before {
+      visibility: visible;
+      width: 100%;
     }
 
     li:hover>a,
     .active,
     .active:focus {
-      color: var(--nav-hover-color);
+      color: var(--nav-color);
     }
 
     .dropdown {
@@ -62,7 +87,7 @@
         top: 130%;
         opacity: 0;
         transition: 0.3s;
-        border-radius: 4px;
+        border-radius: 0;
         z-index: 99;
         box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
 
@@ -72,7 +97,7 @@
 
         a {
           padding: 10px 20px;
-          font-size: 15px;
+          font-size: 14px;
           text-transform: none;
           color: var(--nav-dropdown-color);
 
@@ -112,7 +137,7 @@
   }
 }
 
-/* Navmenu - Mobile */
+/* Mobile Navigation */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
@@ -134,21 +159,22 @@
       inset: 60px 20px 20px 20px;
       padding: 10px 0;
       margin: 0;
-      border-radius: 6px;
+      border-radius: 0;
       background-color: var(--nav-mobile-background-color);
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+      box-shadow: none;
       overflow-y: auto;
       transition: 0.3s;
       z-index: 9998;
-      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
     }
 
     a,
     a:focus {
       color: var(--nav-dropdown-color);
-      padding: 10px 20px;
+      padding: 12px 24px;
       font-family: var(--nav-font);
       font-size: 17px;
-      font-weight: 500;
+      font-weight: 300;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -156,7 +182,7 @@
       transition: 0.3s;
 
       i {
-        font-size: 12px;
+        font-size: 18px;
         line-height: 0;
         margin-left: 5px;
         width: 30px;
@@ -164,13 +190,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 50%;
+        border-radius: 0;
         transition: 0.3s;
-        background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+        color: var(--nav-dropdown-color);
 
         &:hover {
-          background-color: var(--accent-color);
-          color: var(--contrast-color);
+          color: var(--nav-dropdown-hover-color);
         }
       }
     }
@@ -183,8 +208,7 @@
 
     .active i,
     .active:focus i {
-      background-color: var(--accent-color);
-      color: var(--contrast-color);
+      color: var(--nav-dropdown-hover-color);
       transform: rotate(180deg);
     }
 
@@ -196,8 +220,6 @@
         padding: 10px 0;
         margin: 10px 20px;
         background-color: var(--nav-dropdown-background-color);
-        border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-        box-shadow: none;
         transition: all .5s ease-in-out;
 
         ul {

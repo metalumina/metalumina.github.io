@@ -1,141 +1,31 @@
 <!DOCTYPE html>
-<!--
-  File: index.html
-  Project: Metalumina Studios | Coming Soon
-  Created: 10.14.2025
-  Updated: 01.30.2026
-  Author: Faro Digital Studio
--->
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <!-- Primary SEO -->
-  <title>Metalumina Studios | Photography & Creative Direction</title>
-  <meta name="description" content="Metalumina Studios is a Texas photography studio delivering portraits, brand visuals, events, real estate & aerial work with clean light & precise finish. Book shoots in Harlingen & the Rio Grande Valley.">
-  <meta name="keywords" content="Metalumina Studios, photography studio Harlingen, Texas photographer, Rio Grande Valley photographer, portraits, brand photography, product photography, event photography, real estate photography, aerial drone photography, architectural photography, landscape photography, creative direction, RGV, Brownsville, McAllen, South Padre Island">
-  <meta name="author" content="Metalumina Studios">
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-  <link rel="canonical" href="https://metalumina.studio/">
-  <link rel="alternate" hreflang="en-us" href="https://metalumina.studio/">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Metalumina Studios">
-  <meta property="og:title" content="Metalumina Studios — Photography & Creative Direction">
-  <meta property="og:description" content="Portraits, brands, spaces & scenes captured with intent. Harlingen, TX • RGV.">
-  <meta property="og:url" content="https://metalumina.studio/">
-  <meta property="og:image" content="assets/img/apple-touch-icon.png">
-  <meta property="og:image:alt" content="Metalumina Studios logo">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Metalumina Studios — Photography & Creative Direction">
-  <meta name="twitter:description" content="Portraits, brands, spaces & scenes captured with intent. Harlingen, TX • RGV.">
-  <meta name="twitter:image" content="assets/img/apple-touch-icon.png">
-  <meta name="twitter:site" content="@metalumina">
-
-  <!-- PWA/Color -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0B0C0F">
+  <meta name="robots" content="index, follow">
 
-  <!-- Icons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <title>METALUMINA | Independent Photography Studio</title>
+  <meta name="description" content="Independent photography studio based in Harlingen, Texas. Explore distinct creative endeavors for weddings, boudoir, and nature, or start a custom commission or collaboration.">
+  <meta name="keywords" content="METALUMINA, Metalumina Studio, photography studio, Rio Grande Valley photographer, Harlingen photography, South Texas photography, Eros Photography, Nyx Boudoir, Gaia Photography, commercial photography, aerial photography, creative collaboration">
+  <link rel="canonical" href="https://metalumina.studio/">
 
-  <!-- Perf: Preconnect -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <!-- Use hero.png for social preview until a dedicated share image is created. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="METALUMINA">
+  <meta property="og:title" content="METALUMINA | A Light in the Dark">
+  <meta property="og:description" content="An independent photography studio. Explore Eros, Nyx, and Gaia, or start a new commission or collaboration.">
+  <meta property="og:url" content="https://metalumina.studio/">
+  <meta property="og:image" content="https://metalumina.studio/assets/img/hero.png">
+  <meta property="og:image:alt" content="Dramatic light refracting through glass in a dark photography studio.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="METALUMINA | A Light in the Dark">
+  <meta name="twitter:description" content="A light in the dark. Distinct photography worlds, original commissions, and creative collaborations.">
+  <meta name="twitter:image" content="https://metalumina.studio/assets/img/hero.png">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "name": "Metalumina Studios",
-        "url": "https://metalumina.studio/",
-        "logo": "https://metalumina.studio/assets/img/apple-touch-icon.png",
-        "email": "book@metalumina.studio",
-        "sameAs": [
-          "https://linktr.ee/metalumina",
-          "https://www.instagram.com/meta.lumina/",
-          "https://facebook.com/metalumina",
-          "https://x.com/metalumina"
-        ]
-      },
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://metalumina.studio/#business",
-        "name": "Metalumina Studios",
-        "url": "https://metalumina.studio/",
-        "image": "https://metalumina.studio/assets/img/apple-touch-icon.png",
-        "priceRange": "$$",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Harlingen",
-          "addressRegion": "TX",
-          "addressCountry": "US"
-        },
-        "areaServed": [
-          {"@type": "City","name": "Harlingen"},
-          {"@type": "City","name": "Brownsville"},
-          {"@type": "City","name": "McAllen"},
-          {"@type": "Place","name": "Rio Grande Valley"}
-        ],
-        "email": "book@metalumina.studio",
-        "telephone": ""
-      },
-      {
-        "@type": "WebSite",
-        "url": "https://metalumina.studio/",
-        "name": "Metalumina Studios",
-        "inLanguage": "en-US",
-        "potentialAction": {
-          "@type": "ReadAction",
-          "target": ["https://metalumina.studio/"]
-        }
-      },
-      {
-        "@type": "WebPage",
-        "url": "https://metalumina.studio/",
-        "name": "Coming Soon — Metalumina Studios",
-        "description": "Photography & creative direction for portraits, brands, events, real estate & aerial work in Harlingen & the RGV.",
-        "isPartOf": {"@id": "https://metalumina.studio/"}
-      },
-      {
-        "@type": "PhotographyBusiness",
-        "name": "Metalumina Studios",
-        "url": "https://metalumina.studio/",
-        "email": "book@metalumina.studio",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Harlingen",
-          "addressRegion": "TX",
-          "addressCountry": "US"
-        },
-        "sameAs": [
-          "https://linktr.ee/metalumina",
-          "https://www.instagram.com/meta.lumina/",
-          "https://facebook.com/metalumina",
-          "https://x.com/metalumina"
-        ]
-      }
-    ]
-  }
-  </script>
-
-  <!-- Google tag (gtag.js) -->
+  <!-- Existing Metalumina GA4 property, retained from the temporary site. -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MM0P8KR66Q"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -143,169 +33,378 @@
     gtag('js', new Date());
     gtag('config', 'G-MM0P8KR66Q');
   </script>
-</head>
 
+  <!-- Site identity -->
+  <link href="assets/img/favicon.png" rel="icon" type="image/png">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="preload" href="assets/img/hero.png" as="image" type="image/png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS: preserve the supplied Strada file structure. -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Strada
+  * Template URL: https://bootstrapmade.com/strada-bootstrap-agency-template/
+  * Updated: Apr 01 2026 with Bootstrap v5.3.8
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  * Customized for METALUMINA.
+  ======================================================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://metalumina.studio/#website",
+        "url": "https://metalumina.studio/",
+        "name": "METALUMINA",
+        "description": "An independent photography studio with distinct creative endeavors.",
+        "publisher": { "@id": "https://metalumina.studio/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://metalumina.studio/#organization",
+        "name": "METALUMINA",
+        "alternateName": "Metalumina Studio",
+        "url": "https://metalumina.studio/",
+        "logo": "https://metalumina.studio/assets/img/logo.png",
+        "email": "book@metalumina.studio",
+        "description": "Independent photography studio based in Harlingen, Texas, serving South Texas and available for select travel projects.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Harlingen",
+          "addressRegion": "TX",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://www.instagram.com/meta.lumina/",
+          "https://facebook.com/metalumina",
+          "https://x.com/metalumina",
+          "https://linktr.ee/metalumina"
+        ],
+        "brand": [
+          { "@type": "Brand", "name": "Eros Photography", "url": "https://erosphotos.com/" },
+          { "@type": "Brand", "name": "Nyx Boudoir", "url": "https://nyxpics.com/" },
+          { "@type": "Brand", "name": "Gaia Photography", "url": "https://gaiapics.com/" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+</head>
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center px-3 fixed-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center" aria-label="Metalumina Studios home">
-        <h1 class="sitename">Metalumina Studios</h1>
+  <!-- Brand-led navigation. Explore and inquiries have distinct destinations. -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+      <a href="#hero" class="logo d-flex align-items-center me-auto me-xl-0" aria-label="METALUMINA, back to top">
+        <img src="assets/img/logo.png" alt="METALUMINA" width="240" height="56">
       </a>
-      <nav id="navmenu" class="navmenu" aria-label="Primary">
+      <nav id="navmenu" class="navmenu" aria-label="Main navigation">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">Studio</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work with us</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list" aria-label="Toggle navigation"></i>
+        <button type="button" class="mobile-nav-toggle d-xl-none bi bi-list" aria-label="Toggle mobile navigation"></button>
       </nav>
+      <a class="cta-btn" href="#contact"><i class="bi bi-chat-dots" aria-hidden="true"></i> Let's talk</a>
     </div>
   </header>
 
   <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section transparent-background">
-      <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <h2>Our <span class="text-accent fw-bold">New Site</span> is in Development</h2>
-            <h3 class="mt-3 mb-2 fw-semibold">Our pictures are <span class="text-accent fw-bold"><U>metal</U></span></h3>
-          </div>
-          <br>
-          <!-- Countdown -->
-          <div class="countdown d-flex justify-content-center mt-4" data-count="2026/05/01 00:00:00" aria-label="Countdown to launch">
-            <div><h3 class="count-days">--</h3><h4>Days</h4></div>
-            <div><h3 class="count-hours">--</h3><h4>Hours</h4></div>
-            <div><h3 class="count-minutes">--</h3><h4>Minutes</h4></div>
-            <div><h3 class="count-seconds">--</h3><h4>Seconds</h4></div>
-          </div>
-
-          <!-- CTA -->
-          <div class="col-lg-5 hero-newsletter mt-4">
-            <p class="mb-4">
-              Portraits, brands, & places shaped by clean light <br> & finished with care.
-            </p>
-            <a class="btn btn-primary w-100 fw-bold" target="_blank" rel="noopener" href="https://linktr.ee/metalumina" aria-label="Explore Metalumina links">
-              Learn More
-            </a>
-          </div>
-
-          <!-- Socials -->
-          <div class="social-links mt-4" aria-label="Social links">
-            <a href="https://facebook.com/metalumina" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/meta.lumina/" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://x.com/metalumina" target="_blank" aria-label="X"><i class="bi bi-twitter-x"></i></a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-    <!-- /Hero Section -->
-
-    <!-- Studio Section -->
-    <section id="about" class="about section transparent-background">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Studio</h2>
-        <p class="lead-subtitle">Work shaped by light, motion, & place.</p>
-      </div>
-
-      <div class="container">
-        <div class="row gy-5">
-          <div class="content col-xl-5 d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
-            <h3>Built for <span class="text-accent">precision</span> & <span class="text-accent">feel</span></h3>
-            <p>From scouting to post, we move lean & light—direction, lighting, & retouch tuned to the story at hand.</p>
-          </div>
-
-          <div class="col-xl-7" data-aos="fade-up" data-aos-delay="200">
-            <div class="row gy-4">
-              <div class="col-md-6 icon-box position-relative">
-                <i class="bi bi-person-bounding-box"></i>
-                <h4>Portrait &amp; Post</h4>
-                <p>Headshots & editorial sets with calibrated color, grading, & retouch for web & print.</p>
-              </div>
-
-              <div class="col-md-6 icon-box position-relative">
-                <i class="bi bi-airplane"></i>
-                <h4>Drone &amp; Aerial</h4>
-                <p>Cinematic aerials for brands, properties, & events.</p>
-              </div>
-
-              <div class="col-md-6 icon-box position-relative">
-                <i class="bi bi-camera-video"></i>
-                <h4>Events &amp; Documentary</h4>
-                <p>Lean crews for live moments. Everything from launches, to showcases, & behind-the-scenes storytelling.</p>
-              </div>
-
-              <div class="col-md-6 icon-box position-relative">
-                <i class="bi bi-buildings"></i>
-                <h4>Real Estate &amp; Landscape</h4>
-                <p>Listings, architecture, & site imagery that read clean & true across platforms.</p>
+    <!-- One strong image, two distinct routes. -->
+    <section id="hero" class="hero section" aria-labelledby="hero-title">
+      <div class="container-fluid p-0">
+        <div class="cinema-slider">
+          <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">{
+              "loop": false, "slidesPerView": 1, "allowTouchMove": false, "simulateTouch": false, "speed": 600
+            }</script>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="cinema-frame">
+                  <img src="assets/img/hero.png" alt="Light cutting through a dark photographic space" fetchpriority="high" decoding="async" width="1920" height="1080">
+                  <div class="frame-overlay"></div>
+                  <div class="frame-content">
+                    <div class="content-inner">
+                      <div class="accent-line" aria-hidden="true"></div>
+                      <span class="tag-label">Independent photography studio · Harlingen, Texas</span>
+                      <h1 id="hero-title" class="hero-heading">A light in the dark.</h1>
+                      <p>Light changes everything.<br><strong>People, places, stories. Each deserves its own perspective.</strong></p>
+                      <div class="hero-actions">
+                        <a href="#spectrum" class="refined-btn"><i class="bi bi-grid-1x2" aria-hidden="true"></i><span>Explore the spectrum</span></a>
+                        <a href="#work" class="hero-secondary-btn"><i class="bi bi-camera" aria-hidden="true"></i><span>Work with us</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- /Studio Section -->
+    </section><!-- /Hero -->
 
-  </main>
-
-  <footer id="footer" class="footer transparent-background">
-    <div class="container">
-      <div class="row gy-3">
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-geo-alt icon" aria-hidden="true"></i>
-          <div class="address">
-            <h4>Location</h4>
-            <p>Harlingen, TX</p>
+    <!-- Parent studio: different specialties, shared standards. -->
+    <section id="about" class="about section" aria-labelledby="about-title">
+      <div class="container">
+        <div class="row gy-5 align-items-center">
+          <div class="col-lg-4">
+            <div class="content-block">
+              <span class="section-kicker">The studio</span>
+              <h2 id="about-title" class="content-heading">Not one look.<br><span class="accent-word">Every angle.</span></h2>
+              <p class="content-lead">Some stories call for <strong>soft light</strong>. Others need <strong>hard contrast</strong>.<br>We make room for both.</p>
+              <p>Our creative endeavors each have a distinct voice and their own portfolio. What connects them is <strong>considered direction</strong>, strong photography, and careful finishing.</p>
+            </div>
           </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-link-45deg icon" aria-hidden="true"></i>
-          <div>
-            <h4>Get in Touch</h4>
-            <p>
-              <strong>Email:</strong> <a href="mailto:book@metalumina.studio">book@metalumina.studio</a><br>
-              <strong>Links:</strong> <a href="https://linktr.ee/metalumina" target="_blank" rel="noopener">linktr.ee/metalumina</a>
-            </p>
+          <div class="col-lg-4">
+            <div class="image-block">
+              <img src="assets/img/studio.png" class="img-fluid" alt="Camera, lights, and equipment in a working photography studio" width="720" height="960" loading="lazy" decoding="async">
+            </div>
           </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-clock icon" aria-hidden="true"></i>
-          <div>
-            <h4>Status</h4>
-            <p><strong>Site:</strong> Coming Soon<br>
-              <strong>Launch Target:</strong> May 1, 2026
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <h4>Follow</h4>
-          <div class="social-links d-flex">
-            <a href="https://facebook.com/metalumina" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/meta.lumina/" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://x.com/metalumina" target="_blank" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+          <div class="col-lg-4">
+            <div class="features-block">
+              <div class="feature-entry">
+                <h4><i class="bi bi-intersect" aria-hidden="true"></i><span>Distinct by design</span></h4>
+                <p>Different subjects, different visual worlds. No catch-all gallery.</p>
+              </div>
+              <div class="feature-entry">
+                <h4><i class="bi bi-lightning-charge" aria-hidden="true"></i><span>Room to evolve</span></h4>
+                <p>New specialties, creative partnerships, and ambitious ideas all have a place.</p>
+              </div>
+              <ul class="minimal-list">
+                <li>Based in South Texas. Available to travel.</li>
+                <li>Creative direction, capture, and postproduction.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section><!-- /About -->
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>2026</span> <strong class="px-1 sitename">Metalumina Studios</strong> All Rights Reserved<br>
-      Powered by <a href="https://farodigitalstudio.com" target="_blank" rel="noopener">Faro Digital Studio</a></p>
+    <!-- Entire horizontal card opens a dedicated brand website in a new tab. -->
+    <section id="spectrum" class="portfolio section light-background" aria-labelledby="spectrum-title">
+      <div class="container section-title">
+        <span class="section-kicker">The spectrum</span>
+        <h2 id="spectrum-title">Find your perspective.</h2>
+        <p>Three creative endeavors. <strong>Three different worlds.</strong><br>Explore the work and book through the space that speaks to you.</p>
+      </div>
+      <div class="container">
+        <div class="brand-panels">
+          <article class="brand-panel brand-panel--eros">
+            <a href="https://erosphotos.com/" target="_blank" rel="noopener noreferrer" class="brand-panel-link" data-lens="eros" aria-label="Explore Eros wedding and event photography (opens in a new tab)">
+              <img src="assets/img/eros.jpg" class="brand-panel-image" alt="" loading="lazy" decoding="async">
+              <span class="brand-panel-shade" aria-hidden="true"></span>
+              <span class="brand-panel-emblem" aria-hidden="true"><img src="assets/img/erosIcon.png" alt="" width="76" height="76" loading="lazy" decoding="async"></span>
+              <div class="brand-panel-content">
+                <div class="brand-panel-identity">
+                  <span class="brand-panel-category">Weddings &amp; Events</span>
+                  <h3 class="brand-panel-name">EROS</h3>
+                </div>
+                <p class="brand-panel-description">The unscripted parts of a big day.<br><strong>Real connection.</strong> Stories with a pulse.</p>
+                <span class="brand-panel-cta">Explore Eros <i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </article>
+          <article class="brand-panel brand-panel--nyx">
+            <a href="https://nyxpics.com/" target="_blank" rel="noopener noreferrer" class="brand-panel-link" data-lens="nyx" aria-label="Explore Nyx boudoir and editorial photography (opens in a new tab)">
+              <img src="assets/img/nyx.jpg" class="brand-panel-image" alt="" loading="lazy" decoding="async">
+              <span class="brand-panel-shade" aria-hidden="true"></span>
+              <span class="brand-panel-emblem" aria-hidden="true"><img src="assets/img/nyxIcon.png" alt="" width="76" height="76" loading="lazy" decoding="async"></span>
+              <div class="brand-panel-content">
+                <div class="brand-panel-identity">
+                  <span class="brand-panel-category">Boudoir &amp; Editorial</span>
+                  <h3 class="brand-panel-name">NYX</h3>
+                </div>
+                <p class="brand-panel-description"><strong>Intimate frames. Bold portraits.</strong><br>Presence you don't forget.</p>
+                <span class="brand-panel-cta">Explore Nyx <i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </article>
+          <article class="brand-panel brand-panel--gaia">
+            <a href="https://gaiapics.com/" target="_blank" rel="noopener noreferrer" class="brand-panel-link" data-lens="gaia" aria-label="Explore Gaia nature and wildlife photography (opens in a new tab)">
+              <img src="assets/img/gaia.jpg" class="brand-panel-image" alt="" loading="lazy" decoding="async">
+              <span class="brand-panel-shade" aria-hidden="true"></span>
+              <span class="brand-panel-emblem" aria-hidden="true"><img src="assets/img/gaiaIcon.png" alt="" width="76" height="76" loading="lazy" decoding="async"></span>
+              <div class="brand-panel-content">
+                <div class="brand-panel-identity">
+                  <span class="brand-panel-category">Nature &amp; Wildlife</span>
+                  <h3 class="brand-panel-name">GAIA</h3>
+                </div>
+                <p class="brand-panel-description">The wild doesn't pose.<br><strong>We pay attention.</strong></p>
+                <span class="brand-panel-cta">Explore Gaia <i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section><!-- /Spectrum -->
+
+    <!-- Studio commissions, including specialties without a dedicated brand yet. -->
+    <section id="work" class="features section" aria-labelledby="work-title">
+      <div class="container section-title">
+        <span class="section-kicker">Commissions</span>
+        <h2 id="work-title">Bring the idea.<br>We'll bring the eye.</h2>
+        <p>People, places, products, and everything between.<br><strong>From a single frame to a full visual story.</strong></p>
+      </div>
+      <div class="container">
+        <div class="row gy-4 gx-lg-4 mt-2">
+          <div class="col-lg-4 col-md-6"><div class="feature-item"><h5><i class="bi bi-person-bounding-box" aria-hidden="true"></i><span>Portrait &amp; Editorial</span></h5><p>Headshots, personal branding, portraits, and concepts with character.</p></div></div>
+          <div class="col-lg-4 col-md-6"><div class="feature-item"><h5><i class="bi bi-megaphone" aria-hidden="true"></i><span>Brands &amp; Commercial</span></h5><p>Products, campaigns, businesses, and visuals that make their point.</p></div></div>
+          <div class="col-lg-4 col-md-6"><div class="feature-item"><h5><i class="bi bi-house-door" aria-hidden="true"></i><span>Real Estate &amp; Property</span></h5><p>Listings, rentals, interiors, and spaces worth showing off.</p></div></div>
+          <div class="col-lg-4 col-md-6"><div class="feature-item"><h5><i class="bi bi-camera-reels" aria-hidden="true"></i><span>Events &amp; Documentary</span></h5><p>Gatherings, launches, behind-the-scenes, and unscripted moments.</p></div></div>
+          <div class="col-lg-4 col-md-6"><div class="feature-item"><h5><i class="bi bi-airplane" aria-hidden="true"></i><span>Aerial &amp; Location</span></h5><p>Elevated perspectives, destination work, and location coverage.</p></div></div>
+          <div class="col-lg-4 col-md-6"><div class="feature-item"><h5><i class="bi bi-sliders" aria-hidden="true"></i><span>Editing &amp; Post</span></h5><p>Selection, color, finishing, and retouching with intention.</p></div></div>
+        </div>
+      </div>
+    </section><!-- /Commissions -->
+
+    <!-- Collaboration is part of working with us, not a second booking CTA. -->
+    <section id="collaborate" class="call-to-action section dark-background" aria-labelledby="collaborate-title">
+      <div class="container">
+        <div class="row justify-content-center"><div class="col-lg-9 text-center">
+          <div class="cta-header">
+            <span class="label">Collaborate</span>
+            <h2 id="collaborate-title">Good people.<br>Better pictures.</h2>
+            <p class="description">Photographers, models, editors, stylists, crew, and creative partners.<br><strong>If you bring something to the frame, we'd love an introduction.</strong></p>
+          </div>
+          <div class="highlights"><div class="row g-3 justify-content-center">
+            <div class="col-md-4"><div class="highlight-card"><i class="bi bi-camera" aria-hidden="true"></i><span>Photographers &amp; Crew</span></div></div>
+            <div class="col-md-4"><div class="highlight-card"><i class="bi bi-person" aria-hidden="true"></i><span>Models &amp; Talent</span></div></div>
+            <div class="col-md-4"><div class="highlight-card"><i class="bi bi-people" aria-hidden="true"></i><span>Creative Partners</span></div></div>
+          </div></div>
+        </div></div>
+      </div>
+    </section><!-- /Collaborate -->
+
+    <!-- Formspark-ready intake: supply your own METALUMINA endpoint to activate. -->
+    <section id="contact" class="contact section" aria-labelledby="contact-title">
+      <div class="container section-title">
+        <span class="section-kicker">Let's talk</span>
+        <h2 id="contact-title">Make something happen.</h2>
+        <p>Got a shoot, a collaboration, or an idea that's still taking shape?<br><strong>Start with the essentials.</strong> We'll take it from there.</p>
+      </div>
+      <div class="container"><div class="row gy-4 gx-lg-4 align-items-start">
+        <div class="col-lg-7">
+          <div class="form-wrapper studio-form-panel">
+            <h3>Start here.</h3>
+            <form id="metalumina-inquiry" class="studio-form" method="POST" action="https://submit-form.com/REPLACE_WITH_METALUMINA_FORM_ID" aria-label="Booking and collaboration inquiry">
+              <input type="hidden" name="source" value="METALUMINA | Website">
+              <input type="hidden" name="_email.subject" value="[METALUMINA] Studio Inquiry">
+              <input type="hidden" name="_email.from" value="METALUMINA">
+              <input type="hidden" name="_feedback.dark" value="true">
+              <input type="checkbox" name="_honeypot" class="d-none" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <fieldset class="inquiry-purpose">
+                <legend class="form-legend">What brings you here?</legend>
+                <div class="inquiry-choices">
+                  <label class="inquiry-choice"><input type="radio" name="inquiryType" value="Book a project" checked><span><i class="bi bi-camera" aria-hidden="true"></i> Book</span></label>
+                  <label class="inquiry-choice"><input type="radio" name="inquiryType" value="Creative collaboration"><span><i class="bi bi-people" aria-hidden="true"></i> Collaborate</span></label>
+                  <label class="inquiry-choice"><input type="radio" name="inquiryType" value="General inquiry"><span><i class="bi bi-chat-dots" aria-hidden="true"></i> Other</span></label>
+                </div>
+              </fieldset>
+              <div class="form-row">
+                <div class="form-field"><label for="inquiry-name">Name <span aria-hidden="true">*</span></label><input type="text" id="inquiry-name" name="name" autocomplete="name" placeholder="Your name" required maxlength="120"></div>
+                <div class="form-field"><label for="inquiry-email">Email <span aria-hidden="true">*</span></label><input type="email" id="inquiry-email" name="email" autocomplete="email" placeholder="you@example.com" required maxlength="190"></div>
+              </div>
+              <div class="form-row">
+                <div class="form-field"><label for="inquiry-service">Service or interest <span aria-hidden="true">*</span></label>
+                  <select id="inquiry-service" name="serviceType" required>
+                    <option value="" selected disabled>Choose what fits best</option>
+                    <optgroup label="Creative endeavors">
+                      <option>Wedding &amp; event photography (Eros)</option>
+                      <option>Boudoir &amp; editorial (Nyx)</option>
+                      <option>Nature &amp; wildlife (Gaia)</option>
+                    </optgroup>
+                    <optgroup label="Studio commissions">
+                      <option>Portrait &amp; editorial</option>
+                      <option>Brands &amp; commercial</option>
+                      <option>Real estate &amp; property</option>
+                      <option>Events &amp; documentary</option>
+                      <option>Aerial &amp; location</option>
+                      <option>Editing &amp; post</option>
+                    </optgroup>
+                    <optgroup label="Other">
+                      <option>Creative collaboration / talent</option>
+                      <option>Something else / not sure</option>
+                    </optgroup>
+                  </select>
+                </div>
+                <div class="form-field"><label for="inquiry-location">Location <span class="text-muted">(optional)</span></label><input id="inquiry-location" name="location" type="text" placeholder="City / location" maxlength="150" autocomplete="address-level2"></div>
+              </div>
+              <div class="form-row">
+                <div class="form-field"><label for="inquiry-date">Preferred date <span class="text-muted">(optional)</span></label><input id="inquiry-date" type="text" name="preferredDate" placeholder="Date or timeframe" maxlength="100"></div>
+                <div class="form-field"><label for="inquiry-link">Portfolio / reference link <span class="text-muted">(optional)</span></label><input id="inquiry-link" type="url" name="referenceLink" placeholder="https://..." maxlength="300" inputmode="url"></div>
+              </div>
+              <div class="form-field"><label for="inquiry-message">Tell us about it <span aria-hidden="true">*</span></label><textarea id="inquiry-message" name="message" rows="5" maxlength="3500" placeholder="What's the idea? Share whatever details matter." required></textarea></div>
+              <div class="form-actions"><button class="btn btn-dark" type="submit"><i class="bi bi-send" aria-hidden="true"></i><span>Send inquiry</span></button><p class="form-note">We'll reply by email. No big brief needed.</p></div>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <aside class="form-wrapper" aria-label="Studio contact details">
+            <span class="section-kicker">Prefer email?</span>
+            <h3>We're listening.</h3>
+            <p>Skip the form if you'd rather introduce yourself directly.</p>
+            <a class="contact-email" href="mailto:book@metalumina.studio">book@metalumina.studio</a>
+            <ul class="contact-aside-list">
+              <li><i class="bi bi-geo-alt" aria-hidden="true"></i><span>Harlingen, Texas.<br>South Texas and beyond.</span></li>
+              <li><i class="bi bi-stars" aria-hidden="true"></i><span><strong>Have an unusual project?</strong><br>We're interested in those, too.</span></li>
+            </ul>
+          </aside>
+        </div>
+      </div></div>
+    </section><!-- /Contact -->
+  </main>
+
+  <!-- Compact footer: direct links to the creative endeavors and studio social profiles. -->
+  <footer id="footer" class="footer light-background">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-compact">
+          <div class="footer-spectrum-links">
+            <span class="footer-spectrum-label">Explore the spectrum</span>
+            <nav class="footer-links" aria-label="Photography brands">
+              <a href="https://erosphotos.com/" target="_blank" rel="noopener noreferrer" aria-label="Eros wedding and event photography (opens in a new tab)"><i class="bi bi-heart" aria-hidden="true"></i><span>Eros</span></a>
+              <a href="https://nyxpics.com/" target="_blank" rel="noopener noreferrer" aria-label="Nyx boudoir and editorial photography (opens in a new tab)"><i class="bi bi-moon-stars" aria-hidden="true"></i><span>Nyx</span></a>
+              <a href="https://gaiapics.com/" target="_blank" rel="noopener noreferrer" aria-label="Gaia nature and wildlife photography (opens in a new tab)"><i class="bi bi-tree" aria-hidden="true"></i><span>Gaia</span></a>
+            </nav>
+          </div>
+          <nav class="footer-social-links" aria-label="Social media">
+            <a href="https://www.instagram.com/meta.lumina/" target="_blank" rel="noopener noreferrer" aria-label="Metalumina on Instagram (opens in a new tab)" title="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            <a href="https://facebook.com/metalumina" target="_blank" rel="noopener noreferrer" aria-label="Metalumina on Facebook (opens in a new tab)" title="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+            <a href="https://x.com/metalumina" target="_blank" rel="noopener noreferrer" aria-label="Metalumina on X (opens in a new tab)" title="X"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+            <a href="https://linktr.ee/metalumina" target="_blank" rel="noopener noreferrer" aria-label="All Metalumina links on Linktree (opens in a new tab)" title="More links"><i class="bi bi-link-45deg" aria-hidden="true"></i></a>
+          </nav>
+        </div>
+      </div>
     </div>
+    <div class="footer-bottom"><div class="container"><div class="footer-bottom-row">
+      <p>&copy; 2026 METALUMINA · Harlingen, Texas</p>
+      <p>Powered by <a href="https://farodigitalstudio.com/" target="_blank" rel="noopener noreferrer">Faro Digital Studio</a></p>
+    </div></div></div>
   </footer>
 
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Scroll to top"><i class="bi bi-arrow-up-short"></i></a>
-  <div id="preloader"></div>
+  <a href="#hero" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></a>
 
-  <!-- Vendor JS -->
+  <!-- Strada JS remains untouched for this pass. -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

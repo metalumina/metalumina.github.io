@@ -3,26 +3,88 @@
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(255, 255, 255, 0);
+  --background-color: #f3f3f3;
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 15px 0;
+  padding: 10px 0;
   transition: all 0.5s;
   z-index: 997;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 
   .logo {
     line-height: 1;
 
     img {
-      max-height: 32px;
+      max-height: 36px;
       margin-right: 8px;
     }
 
     h1 {
       font-size: 30px;
       margin: 0;
-      font-weight: 700;
+      font-weight: 300;
       color: var(--heading-color);
     }
+
+    span {
+      font-size: 30px;
+      color: var(--accent-color);
+      margin-left: 2px;
+      font-weight: 700;
+    }
   }
+
+  .cta-btn,
+  .cta-btn:focus {
+    color: var(--contrast-color);
+    background: var(--accent-color);
+    font-size: 13px;
+    padding: 8px 26px;
+    margin: 0;
+    border-radius: 0;
+    transition: 0.3s;
+
+    &:hover {
+      color: var(--contrast-color);
+      background: color-mix(in srgb, var(--accent-color), transparent 15%);
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .logo {
+      order: 1;
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+
+    .cta-btn {
+      order: 2;
+      margin: 0 15px 0 0;
+      padding: 6px 20px;
+    }
+
+    .navmenu {
+      order: 3;
+    }
+  }
+}
+
+/* Index Page Header
+------------------------------*/
+.index-page .header {
+  --background-color: rgba(0, 0, 0, 0.1);
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --nav-color: #ffffff;
+}
+
+/* Index Page Header on Scroll
+------------------------------*/
+.index-page.scrolled .header {
+  --background-color: #f3f3f3;
+  --default-color: #444444;
+  --heading-color: #282828;
+  --nav-color: #5b5b5b;
 }

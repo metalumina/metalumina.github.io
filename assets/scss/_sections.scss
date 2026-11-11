@@ -6,16 +6,15 @@ section,
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 60px 0;
-  scroll-margin-top: 90px;
+  scroll-margin-top: 72px;
   overflow: clip;
-  position: relative;
 }
 
 @media (max-width: 1199px) {
 
   section,
   .section {
-    scroll-margin-top: 66px;
+    scroll-margin-top: 57px;
   }
 }
 
@@ -28,31 +27,39 @@ section,
   position: relative;
 
   h2 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    position: relative;
+    font-size: 2.6rem;
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--heading-color);
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
 
-    &:after {
-      content: '';
-      position: absolute;
-      display: block;
-      width: 50px;
-      height: 3px;
-      background: var(--accent-color);
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
+    @media (max-width: 768px) {
+      font-size: 2.2rem;
     }
   }
 
   p {
-    margin-bottom: 0;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: color-mix(in srgb, var(--default-color), transparent 25%);
+    max-width: 900px;
+    margin: 0 auto;
+    text-wrap: balance;
   }
 }
 
 @import './sections/_hero.scss';
 @import './sections/_about.scss';
+@import './sections/_services.scss';
+@import './sections/_call-to-action.scss';
+@import './sections/_features.scss';
+@import './sections/_clients.scss';
+@import './sections/_portfolio.scss';
+@import './sections/_pricing.scss';
+@import './sections/_faq.scss';
+@import './sections/_team.scss';
 @import './sections/_contact.scss';
+@import './sections/_portfolio-details.scss';
+@import './sections/_service-details.scss';
+@import './sections/_starter-section.scss';
