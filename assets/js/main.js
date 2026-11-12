@@ -194,4 +194,84 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+
+  /**
+   * METALUMINA inquiry form
+   * AJAX retains the visitor on the page and provides an inline confirmation.
+   * The regular HTML form POST remains a fallback if JavaScript is disabled.
+   * Notification recipients are configured in Formspark, not in the page.
+   */
+  const inquiryForm = document.querySelector('#metalumina-inquiry');
+  if (inquiryForm) {
+    const submitButton = inquiryForm.querySelector('button[type="submit"]');
+    const submitLabel = submitButton?.querySelector('span');
+    const feedback = document.querySelector('#metalumina-form-feedback');
+    const originalLabel = submitLabel?.textContent || 'Send inquiry';
+    let sending = false;
+
+    const showFeedback = (message, isError = false) => {
+      if (!feedback) return;
+      feedback.textContent = message;
+      feedback.classList.toggle('text-warning', isError);
+      feedback.hidden = false;
+    };
+
+    inquiryForm.addEventListener('input', () => {
+      if (feedback && !sending) feedback.hidden = true;
+    });
+
+    inquiryForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (sending || !inquiryForm.reportValidity()) return;
+
+      // Formspark requires nested _email metadata when receiving JSON.
+      // Keep the hidden HTML inputs for the no-JavaScript form fallback.
+      const fields = new FormData(inquiryForm);
+      const payload = Object.fromEntries(fields.entries());
+      payload._email = {
+        subject: fields.get('_email.subject') || '[METALUMINA] Studio Inquiry',
+        from: fields.get('_email.from') || 'METALUMINA'
+      };
+      delete payload['_email.subject'];
+      delete payload['_email.from'];
+      delete payload['_feedback.dark']; // Applies to hosted feedback only.
+
+      sending = true;
+      if (submitButton) submitButton.disabled = true;
+      if (submitLabel) submitLabel.textContent = 'Sending...';
+      if (feedback) feedback.hidden = true;
+
+      try {
+        const response = await fetch(inquiryForm.action, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+        if (!response.ok) throw new Error(`Formspark rejected the submission (${response.status})`);
+
+        inquiryForm.reset();
+        showFeedback('Message sent. Thanks for reaching out! We’ll reply by email.');
+
+        // Count only accepted inquiries, without sending personally identifying data.
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'generate_lead', {
+            form_name: 'metalumina_inquiry',
+            inquiry_type: payload.inquiryType,
+            service_type: payload.serviceType
+          });
+        }
+      } catch (error) {
+        console.error('Metalumina inquiry submission failed:', error);
+        showFeedback('Your message didn’t go through. Please try again, or email book@metalumina.studio.', true);
+      } finally {
+        sending = false;
+        if (submitButton) submitButton.disabled = false;
+        if (submitLabel) submitLabel.textContent = originalLabel;
+      }
+    });
+  }
+
 })();
